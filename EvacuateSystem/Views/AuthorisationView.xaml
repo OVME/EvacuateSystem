@@ -1,0 +1,14 @@
+﻿<manager:ViewBase x:Class="EvacuateSystem.Views.AuthorisationView"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:manager="clr-namespace:EvacuateSystem.Classes"
+        Title="Авторизация" Height="189.552" Width="338.806">
+    <Grid>
+        <TextBox HorizontalAlignment="Left" Text="{Binding AuthSurname}" Height="23" Margin="10,35,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="311"/>
+        <TextBox HorizontalAlignment="Left" Text="{Binding AuthPassword}"  Height="23" Margin="10,84,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="311"/>
+        <Button Content="Авторизироваться" Command="{Binding AuthoriseCommand}" HorizontalAlignment="Left" Margin="162,129,0,0" VerticalAlignment="Top" Width="159"/>
+        <TextBlock HorizontalAlignment="Left" Margin="10,19,0,0" TextWrapping="Wrap" Text="Ваша фамилия" VerticalAlignment="Top"/>
+        <TextBlock HorizontalAlignment="Left" Margin="10,68,0,0" TextWrapping="Wrap" Text="Ваш пароль" VerticalAlignment="Top"/>
+
+    </Grid>
+</manager:ViewBase>

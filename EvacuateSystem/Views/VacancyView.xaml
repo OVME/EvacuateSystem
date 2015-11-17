@@ -1,0 +1,18 @@
+﻿<manager:ViewBase x:Class="EvacuateSystem.Views.VacancyView"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:manager="clr-namespace:EvacuateSystem.Classes"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Вакансии" Height="340.299" Width="298.507" ResizeMode="NoResize">
+    <Grid>
+        <DataGrid HorizontalAlignment="Left" AutoGenerateColumns="False" ItemsSource="{Binding ObjectsCollection, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" SelectionMode="Single" IsReadOnly="True" SelectedItem="{Binding SelectedObject}" Margin="10,10,0,0" VerticalAlignment="Top" Height="252" Width="272" >
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="Профессия" Binding="{Binding Path=Profession.Title}"/>
+                <DataGridTextColumn Header="Населенный пункт" Binding="{Binding Path=Village.Name}"/>
+                <DataGridTextColumn Header="Организация" Binding="{Binding Organisation}"/>
+            </DataGrid.Columns>
+        </DataGrid>
+        <Button Content="Добавить" Command="{Binding AddCommand}" HorizontalAlignment="Left" Margin="35,275,0,0" VerticalAlignment="Top" Width="74"/>
+        <Button Content="Редактировать" Command="{Binding EditCommand}" HorizontalAlignment="Left" Margin="114,275,0,0" VerticalAlignment="Top" Width="74"/>
+        <Button Content="Удалить" Command="{Binding RemoveCommand}" HorizontalAlignment="Left" Margin="193,275,0,0" VerticalAlignment="Top" Width="74"/>
+    </Grid>
+</manager:ViewBase>

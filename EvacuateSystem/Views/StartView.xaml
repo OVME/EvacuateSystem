@@ -1,0 +1,14 @@
+﻿<manager:ViewBase x:Class="EvacuateSystem.Views.StartView"
+        xmlns:manager="clr-namespace:EvacuateSystem.Classes"  
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Начальное окно" Height="201.537" Width="325.001" ResizeMode="NoResize">
+    <Grid>
+        <Button Content="Регистрация" Command ="{Binding OpenRegistrationViewCommand}" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Width="297" Height="26" FontSize="18"/>
+        <Button Content="Подселение" Command ="{Binding OpenPlacementViewCommand}" HorizontalAlignment="Left" Margin="10,73,0,0" VerticalAlignment="Top" Width="297" Height="29" FontSize="18"/>
+        <Button Content="Выбор рейса" Command ="{Binding OpenTripViewCommand}" HorizontalAlignment="Left" Margin="10,107,0,0" VerticalAlignment="Top" Width="297" Height="27" FontSize="18"/>
+        <Button Content="Работа с БД" Command ="{Binding OpenBdViewCommand}" HorizontalAlignment="Left" Margin="10,139,0,0" VerticalAlignment="Top" Width="297" Height="27" FontSize="18"/>
+        <Button Content="Подбор вакансии" Command ="{Binding OpenGetVacancyViewCommand}" HorizontalAlignment="Left" Margin="10,41,0,0" VerticalAlignment="Top" Width="297" Height="27" FontSize="18"/>
+
+    </Grid>
+</manager:ViewBase>

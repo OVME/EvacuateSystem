@@ -1,0 +1,17 @@
+﻿<manager:ViewBase x:Class="EvacuateSystem.Views.AddVacancyView"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:manager="clr-namespace:EvacuateSystem.Classes"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Новая вакансия" Height="156.865" Width="308.955" ResizeMode="NoResize">
+    <Grid>
+        <TextBox HorizontalAlignment="Left" Height="23" Margin="167,10,0,0" TextWrapping="Wrap" Text="{Binding Path=NewObject.Profession.Title}" VerticalAlignment="Top" Width="120"/>
+        <ComboBox HorizontalAlignment="Left" ItemsSource="{Binding Villages}" DisplayMemberPath="Name" SelectedItem="{Binding Path=NewObject.Village}" Margin="167,38,0,0" VerticalAlignment="Top" Width="120"/>
+        <TextBlock HorizontalAlignment="Left" Margin="10,17,0,0" TextWrapping="Wrap" Text="Название специальности" VerticalAlignment="Top"/>
+        <TextBlock HorizontalAlignment="Left" Margin="10,44,0,0" TextWrapping="Wrap" Text="Населенный пункт" VerticalAlignment="Top"/>
+        <Button Command="{Binding ApplyCommand}" Content="Сохранить" HorizontalAlignment="Left" Margin="132,96,0,0" VerticalAlignment="Top" Width="75"/>
+        <Button Command="{Binding CancelCommand}" Content="Отмена" HorizontalAlignment="Left" Margin="212,96,0,0" VerticalAlignment="Top" Width="75"/>
+        <TextBox HorizontalAlignment="Left" Height="23" Margin="167,68,0,0" TextWrapping="Wrap" Text="{Binding Path=NewObject.Organisation}" VerticalAlignment="Top" Width="120"/>
+        <TextBlock HorizontalAlignment="Left" Margin="10,75,0,0" TextWrapping="Wrap" Text="Организация" VerticalAlignment="Top"/>
+
+    </Grid>
+</manager:ViewBase>

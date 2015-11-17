@@ -1,0 +1,19 @@
+﻿<manager:ViewBase x:Class="EvacuateSystem.Views.AutomobileView"
+                  xmlns:manager ="clr-namespace:EvacuateSystem.Classes"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Автомобили" Height="332.836" Width="300" ResizeMode="NoResize">
+    <Grid>
+        <DataGrid HorizontalAlignment="Left" AutoGenerateColumns="False" ItemsSource="{Binding ObjectsCollection, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" SelectionMode="Single" IsReadOnly="True" SelectedItem="{Binding SelectedObject}" Margin="10,10,0,0" VerticalAlignment="Top" Height="252" Width="272">
+            <DataGrid.Columns>
+                <DataGridTextColumn Binding="{Binding ModelAndMark}" Header="Модель и марка"/>
+                <DataGridTextColumn Binding="{Binding NumberOfSets}" Header="Количество мест"/>
+                <DataGridTextColumn Binding="{Binding Path=Driver.Surname}" Header="Водитель"/>
+            </DataGrid.Columns>
+        </DataGrid>
+        <Button Content="Добавить" Command="{Binding AddCommand}" HorizontalAlignment="Left" Margin="35,275,0,0" VerticalAlignment="Top" Width="74"/>
+        <Button Content="Редактировать" Command="{Binding EditCommand}" HorizontalAlignment="Left" Margin="114,275,0,0" VerticalAlignment="Top" Width="74"/>
+        <Button Content="Удалить" Command="{Binding RemoveCommand}" HorizontalAlignment="Left" Margin="193,275,0,0" VerticalAlignment="Top" Width="74"/>
+
+    </Grid>
+</manager:ViewBase>

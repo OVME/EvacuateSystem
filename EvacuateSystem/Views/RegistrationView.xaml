@@ -1,0 +1,29 @@
+﻿<manager:ViewBase x:Class="EvacuateSystem.Views.RegistrationView"
+        xmlns:manager="clr-namespace:EvacuateSystem.Classes"      
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Регистрация" Height="436.358" Width="356" ResizeMode="NoResize">
+    <Grid>
+        <TextBlock HorizontalAlignment="Left" Margin="10,20,0,0" TextWrapping="Wrap" Text="Фамилия" VerticalAlignment="Top"/>
+        <TextBlock HorizontalAlignment="Left" Margin="10,48,0,0" TextWrapping="Wrap" Text="Имя" VerticalAlignment="Top"/>
+        <TextBlock HorizontalAlignment="Left" Margin="10,75,0,0" TextWrapping="Wrap" Text="Отчество" VerticalAlignment="Top"/>
+        <TextBlock HorizontalAlignment="Left" Margin="10,103,0,0" TextWrapping="Wrap" Text="Дата рождения" VerticalAlignment="Top"/>
+        <TextBlock HorizontalAlignment="Left" Margin="10,131,0,0" TextWrapping="Wrap" Text="Тип документа" VerticalAlignment="Top"/>
+        <TextBlock HorizontalAlignment="Left" Margin="10,159,0,0" TextWrapping="Wrap" Text="Серия номер" VerticalAlignment="Top"/>
+        <TextBlock HorizontalAlignment="Left" Margin="10,189,0,0" TextWrapping="Wrap" Text="Наименование органа выдачи" VerticalAlignment="Top"/>
+        <TextBlock HorizontalAlignment="Left" Margin="10,240,0,0" TextWrapping="Wrap" VerticalAlignment="Top"><Run Text="Примеча"/><Run Text="ни"/><Run Text="е"/></TextBlock>
+        <TextBox HorizontalAlignment="Left" Height="23" Margin="103,10,0,0" TextWrapping="Wrap" Text="{Binding Path=NewCard.Evacuated.Surname}" VerticalAlignment="Top" Width="235"/>
+        <TextBox HorizontalAlignment="Left" Height="23" Margin="103,38,0,0" TextWrapping="Wrap" Text="{Binding Path=NewCard.Evacuated.Name}" VerticalAlignment="Top" Width="235"/>
+        <TextBox HorizontalAlignment="Left" Height="23" Margin="103,68,0,0" TextWrapping="Wrap" Text="{Binding Path=NewCard.Evacuated.Patronomic}" VerticalAlignment="Top" Width="235"/>
+        <TextBox HorizontalAlignment="Left" Height="23" Margin="103,152,0,0" TextWrapping="Wrap" Text="{Binding Path=NewCard.Evacuated.NumberOfDocument}" VerticalAlignment="Top" Width="235"/>
+        <TextBox HorizontalAlignment="Left" Height="23" Margin="184,182,0,0" TextWrapping="Wrap" Text="{Binding Path=NewCard.Evacuated.DocumentData}" VerticalAlignment="Top" Width="154"/>
+        <TextBox HorizontalAlignment="Left" Height="111" Margin="10,261,0,0" TextWrapping="Wrap" Text="{Binding Path=NewCard.RegistrationRecord.Note}" VerticalAlignment="Top" Width="328"/>
+        <ComboBox HorizontalAlignment="Left" Margin="103,125,0,0" VerticalAlignment="Top" Width="235" ItemsSource="{Binding DocumentTypesCollection}" DisplayMemberPath="TypeName" SelectedItem="{Binding SelectedDocumentType}"/>
+        <Button Content="Зарегистрировать" Command="{Binding ApplyCommand}" HorizontalAlignment="Left" Margin="149,377,0,0" VerticalAlignment="Top" Width="111"/>
+        <Button Content="Отмена" Command ="{Binding CancelCommand}"  HorizontalAlignment="Left" Margin="265,377,0,0" VerticalAlignment="Top" Width="75"/>
+        <TextBlock HorizontalAlignment="Left" Margin="10,219,0,0" TextWrapping="Wrap" Text="Количество членов семьи" VerticalAlignment="Top"/>
+        <TextBox HorizontalAlignment="Left" Height="23" Margin="184,213,0,0" TextWrapping="Wrap" Text="{Binding Path=NewCard.Evacuated.NumberOfFamilyMembers}" VerticalAlignment="Top" Width="76"/>
+        <DatePicker HorizontalAlignment="Left" SelectedDate="{Binding Path=NewCard.Evacuated.DateOfBirth}" DisplayDateStart="01-01-1900" DisplayDateEnd="{Binding EndDate}" Margin="103,96,0,0" VerticalAlignment="Top"/>
+
+    </Grid>
+</manager:ViewBase>
